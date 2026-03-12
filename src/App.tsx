@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Home from './components/Home';
 
 const AboutPage = lazy(() => import('./pages/AboutPage'));
@@ -24,11 +24,13 @@ const LoadingSpinner = () => (
 function AnimatedRoutes() {
   const location = useLocation();
   
+  const Presence = AnimatePresence as React.FC<{ mode?: string; children: React.ReactNode }>;
+  
   return (
     <div>
-      <AnimatePresence mode="wait" key={location.pathname}>
+      <Presence mode="wait">
         <Suspense fallback={<LoadingSpinner />}>
-          <Routes location={location}>
+          <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
@@ -40,7 +42,7 @@ function AnimatedRoutes() {
             <Route path="/terms-of-service" element={<TermsOfServicePage />} />
           </Routes>
         </Suspense>
-      </AnimatePresence>
+      </Presence>
     </div>
   );
 }
