@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white border-t-4 border-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -46,8 +46,8 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li><Link to="/" className="text-gray-300 hover:text-primary transition-colors duration-300">Home</Link></li>
-              <li><a href="#about" className="text-gray-300 hover:text-primary transition-colors duration-300">About</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-primary transition-colors duration-300">Services</a></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-primary transition-colors duration-300">About</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-primary transition-colors duration-300">Services</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-primary transition-colors duration-300">Contact</Link></li>
             </ul>
           </div>
@@ -131,8 +131,8 @@ const Footer: React.FC = () => {
               © 2024 Healex Physiotherapy. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors duration-300">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors duration-300">Terms of Service</a>
+              <Link to="/privacy-policy" className="text-gray-400 hover:text-primary text-sm transition-colors duration-300">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="text-gray-400 hover:text-primary text-sm transition-colors duration-300">Terms of Service</Link>
             </div>
           </div>
         </div>

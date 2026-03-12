@@ -1,15 +1,27 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrollToTop';
+import WhatsAppButton from '../components/WhatsAppButton';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const ServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const navigate = useNavigate();
   const { ref: heroRef, isIntersecting: heroVisible } = useScrollAnimation();
   const { ref: processRef, isIntersecting: processVisible } = useScrollAnimation();
   const { ref: insuranceRef, isIntersecting: insuranceVisible } = useScrollAnimation();
   const { ref: ctaRef, isIntersecting: ctaVisible } = useScrollAnimation();
+
+  const handleBookService = (service: typeof services[0]) => {
+    const serviceData = {
+      title: service.title,
+      price: service.price,
+      duration: service.duration
+    };
+    navigate(`/contact?service=${encodeURIComponent(service.title)}&price=${encodeURIComponent(service.price)}&duration=${encodeURIComponent(service.duration)}`);
+  };
 
   const services = [
     {
@@ -201,12 +213,12 @@ const ServicesPage: React.FC = () => {
                     ))}
                   </div>
                   
-                  <Link 
-                    to="/contact" 
+                  <button 
+                    onClick={() => handleBookService(service)}
                     className="w-full bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-all duration-300 font-medium hover-lift animate-glow text-center block"
                   >
                     Book This Service
-                  </Link>
+                  </button>
                 </div>
               </div>
             ))}
@@ -342,7 +354,9 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
 
+      <ScrollToTop />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

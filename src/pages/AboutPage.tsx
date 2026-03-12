@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrollToTop';
+import WhatsAppButton from '../components/WhatsAppButton';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const AboutPage: React.FC = () => {
@@ -194,7 +196,9 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
+      <ScrollToTop />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

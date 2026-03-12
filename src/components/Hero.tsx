@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
             {/* Floating Patient Avatars */}
             <div className="absolute -top-4 -right-4 bg-white rounded-full p-2 shadow-lg animate-float">
               <img 
-                src="https://images.unsplash.com/photo-1494790108755-2616b332c5ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
                 alt="Patient"
                 className="w-12 h-12 rounded-full"
               />

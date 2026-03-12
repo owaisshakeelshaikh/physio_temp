@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 const Contact: React.FC = () => {
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -13,6 +15,20 @@ const Contact: React.FC = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useEffect(() => {
+    const serviceParam = searchParams.get('service');
+    if (serviceParam) {
+      setFormData(prev => ({
+        ...prev,
+        service: decodeURIComponent(serviceParam)
+      }));
+    }
+  }, [searchParams]);
+
+  const selectedService = searchParams.get('service');
+  const selectedPrice = searchParams.get('price');
+  const selectedDuration = searchParams.get('duration');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -44,11 +60,14 @@ const Contact: React.FC = () => {
   const services = [
     'General Physiotherapy',
     'Sports Injury Rehabilitation',
-    'Post-Surgical Recovery',
-    'Chronic Pain Management',
+    'Orthopedic Physiotherapy',
     'Neurological Physiotherapy',
     'Pediatric Physiotherapy',
     'Geriatric Physiotherapy',
+    'Chronic Pain Management',
+    "Women's Health Physiotherapy",
+    'Workplace Injury Rehabilitation',
+    'Post-Surgical Recovery',
     'Other'
   ];
 
@@ -165,6 +184,28 @@ const Contact: React.FC = () => {
 
           {/* Appointment Form */}
           <div className="lg:col-span-2">
+            {/* Selected Service Info */}
+            {selectedService && (
+              <div className="bg-gradient-to-r from-primary to-primary/90 text-white rounded-2xl p-6 mb-6 shadow-lg">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Selected Service</h3>
+                    <p className="text-2xl font-bold">{decodeURIComponent(selectedService)}</p>
+                    <div className="flex items-center space-x-4 mt-2">
+                      <span className="text-white/90">{selectedPrice && decodeURIComponent(selectedPrice)}</span>
+                      <span className="text-white/90">•</span>
+                      <span className="text-white/90">{selectedDuration && decodeURIComponent(selectedDuration)}</span>
+                    </div>
+                  </div>
+                  <div className="bg-white/20 rounded-full p-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            )}
+
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               {isSubmitted ? (
                 <div className="text-center py-12">

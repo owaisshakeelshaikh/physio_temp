@@ -4,8 +4,11 @@ import Hero from './Hero';
 import AboutSection from './AboutSection';
 import Testimonials from './Testimonials';
 import Blog from './Blog';
+import InstagramReels from './InstagramReels';
 import CTA from './CTA';
 import Footer from './Footer';
+import WhatsAppButton from './WhatsAppButton';
+import ScrollToTop from './ScrollToTop';
 
 const Home: React.FC = () => {
   return (
@@ -15,8 +18,11 @@ const Home: React.FC = () => {
       <AboutSection />
       <Testimonials />
       <Blog />
+      <InstagramReels />
       <CTA />
+      <ScrollToTop />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

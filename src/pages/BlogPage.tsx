@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrollToTop';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -366,7 +368,9 @@ const BlogPage: React.FC = () => {
         </div>
       </div>
 
+      <ScrollToTop />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
