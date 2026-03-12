@@ -32,7 +32,7 @@ const AppointmentBooking: React.FC = () => {
   const handleConfirm = () => {
     const treatmentName = currentTreatment?.name || '';
     const message = encodeURIComponent(
-      `Hi! I'd like to book an appointment at Healex Physiotherapy.\n\n` +
+      `Hi! I'd like to book an appointment at RestoreFlex Physiotherapy.\n\n` +
       `Name: ${name}\nPhone: ${phone}\n` +
       `Treatment: ${treatmentName}\n` +
       `Date: ${selectedDate}\nTime: ${selectedTime}\n\n` +

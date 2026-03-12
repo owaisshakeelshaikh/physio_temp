@@ -5,8 +5,8 @@ const GoogleMap: React.FC = () => {
   const { ref: sectionRef, isIntersecting: sectionVisible } = useScrollAnimation();
 
   const phoneNumber = '+1234567890';
-  const whatsappMessage = encodeURIComponent('Hi! I would like to book a consultation at Healex Physiotherapy.');
-  const directionsUrl = 'https://www.google.com/maps/dir/?api=1&destination=Healex+Physiotherapy+Clinic';
+  const whatsappMessage = encodeURIComponent('Hi! I would like to book a consultation at RestoreFlex Physiotherapy.');
+  const directionsUrl = 'https://www.google.com/maps/dir/?api=1&destination=RestoreFlex+Physiotherapy+Clinic';
 
   return (
     <section
@@ -40,7 +40,7 @@ const GoogleMap: React.FC = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Healex Clinic Location"
+                title="RestoreFlex Clinic Location"
               ></iframe>
             </div>
           </div>

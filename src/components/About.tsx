@@ -39,7 +39,7 @@ const About: React.FC = () => {
               </h2>
               
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                At Healex Physiotherapy, we believe in a holistic approach to healing. Our team of experienced physiotherapists combines cutting-edge techniques with compassionate care to help you achieve your health goals.
+                At RestoreFlex Physiotherapy, we believe in a holistic approach to healing. Our team of experienced physiotherapists combines cutting-edge techniques with compassionate care to help you achieve your health goals.
               </p>
 
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">

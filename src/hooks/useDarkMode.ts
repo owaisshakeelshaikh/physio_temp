@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 export const useDarkMode = () => {
   const [isDark, setIsDark] = useState(() => {
-    const saved = localStorage.getItem('healex-dark-mode');
+    const saved = localStorage.getItem('RestoreFlex-dark-mode');
     if (saved !== null) return saved === 'true';
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
@@ -14,7 +14,7 @@ export const useDarkMode = () => {
     } else {
       root.classList.remove('dark');
     }
-    localStorage.setItem('healex-dark-mode', String(isDark));
+    localStorage.setItem('RestoreFlex-dark-mode', String(isDark));
   }, [isDark]);
 
   const toggle = () => setIsDark(prev => !prev);

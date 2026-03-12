@@ -15,7 +15,7 @@ const AboutPage: React.FC = () => {
   const { ref: statsRef, isIntersecting: statsVisible } = useScrollAnimation();
 
   const milestones = [
-    { year: "2009", title: "Healex Founded", description: "Started with a small clinic and a big vision" },
+    { year: "2009", title: "RestoreFlex Founded", description: "Started with a small clinic and a big vision" },
     { year: "2014", title: "Expanded to 3 Locations", description: "Grew to serve more communities across the city" },
     { year: "2018", title: "Award-Winning Care", description: "Received Excellence in Healthcare Award" },
     { year: "2021", title: "Digital Integration", description: "Launched telehealth services and digital patient portal" },
@@ -25,7 +25,7 @@ const AboutPage: React.FC = () => {
   return (
     <PageTransition>
     <div className="min-h-screen dark:bg-darkBg">
-      <SEOHead title="About Us" description="Learn about Healex Physiotherapy - over 15 years of dedicated physiotherapy care, transforming lives through expert treatment and compassionate healing." />
+      <SEOHead title="About Us" description="Learn about RestoreFlex Physiotherapy - over 15 years of dedicated physiotherapy care, transforming lives through expert treatment and compassionate healing." />
       <Navbar />
       
       {/* Hero Section */}
@@ -33,7 +33,7 @@ const AboutPage: React.FC = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-6 text-center">
           <h1 className={`text-4xl lg:text-6xl font-bold text-white font-poppins mb-6 ${heroVisible ? 'animate-fadeInDown animate-stagger-1' : ''}`}>
-            About Healex Physiotherapy
+            About RestoreFlex Physiotherapy
           </h1>
           <p className={`text-xl text-white/90 max-w-3xl mx-auto ${heroVisible ? 'animate-fadeInUp animate-stagger-2' : ''}`}>
             For over 15 years, we've been dedicated to transforming lives through expert physiotherapy care and compassionate healing.
@@ -57,7 +57,7 @@ const AboutPage: React.FC = () => {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                Founded in 2009 by Dr. Sarah Johnson, Healex Physiotherapy began as a small clinic with a simple mission: to provide exceptional, personalized care that helps patients reclaim their quality of life.
+                Founded in 2009 by Dr. Sarah Johnson, RestoreFlex Physiotherapy began as a small clinic with a simple mission: to provide exceptional, personalized care that helps patients reclaim their quality of life.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                 Today, we've grown into a multi-location practice serving thousands of patients each year, but our core values remain the same: compassion, excellence, and a commitment to helping every patient achieve their optimal health.

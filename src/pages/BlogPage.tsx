@@ -161,7 +161,7 @@ const BlogPage: React.FC = () => {
   return (
     <PageTransition>
     <div className="min-h-screen dark:bg-darkBg">
-      <SEOHead title="Blog" description="Read expert physiotherapy tips, wellness advice, and health insights from the Healex team." />
+      <SEOHead title="Blog" description="Read expert physiotherapy tips, wellness advice, and health insights from the RestoreFlex team." />
       <Navbar />
       
       {/* Hero Section */}

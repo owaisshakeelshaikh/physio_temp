@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link to="/" className="text-2xl font-bold text-primary">Healex</Link>
+            <Link to="/" className="text-2xl font-bold text-primary">RestoreFlex</Link>
             <p className="text-gray-300 leading-relaxed">
               Your trusted partner in physiotherapy and rehabilitation. We're committed to helping you achieve optimal health and wellness through personalized care.
             </p>
@@ -104,11 +104,11 @@ const Footer: React.FC = () => {
                   </svg>
                   (555) 123-4567
                 </a>
-                <a href="mailto:info@healex.com" className="flex items-center text-gray-300 hover:text-primary transition-colors duration-300">
+                <a href="mailto:info@RestoreFlex.com" className="flex items-center text-gray-300 hover:text-primary transition-colors duration-300">
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                   </svg>
-                  info@healex.com
+                  info@RestoreFlex.com
                 </a>
                 <a href="/contact" className="flex items-center text-gray-300 hover:text-primary transition-colors duration-300">
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -128,7 +128,7 @@ const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Healex Physiotherapy. All rights reserved.
+              © 2024 RestoreFlex Physiotherapy. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy-policy" className="text-gray-400 hover:text-primary text-sm transition-colors duration-300">Privacy Policy</Link>

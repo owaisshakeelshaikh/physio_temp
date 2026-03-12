@@ -30,7 +30,7 @@ const BlogPostPage: React.FC = () => {
     );
   }
 
-  const shareUrl = encodeURIComponent(`https://healex.com/blog/${post.slug}`);
+  const shareUrl = encodeURIComponent(`https://RestoreFlex.com/blog/${post.slug}`);
   const shareTitle = encodeURIComponent(post.title);
 
   const relatedPosts = blogPosts.filter(p => p.id !== post.id).slice(0, 3);
@@ -107,7 +107,7 @@ const BlogPostPage: React.FC = () => {
           title={post.title}
           description={post.excerpt}
           ogImage={post.image}
-          ogUrl={`https://healex.com/blog/${post.slug}`}
+          ogUrl={`https://RestoreFlex.com/blog/${post.slug}`}
           ogType="article"
         />
         <Navbar />

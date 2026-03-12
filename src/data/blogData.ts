@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
 
 Sitting at a desk for 8+ hours a day has become the norm for millions of workers worldwide. Unfortunately, this sedentary lifestyle takes a significant toll on our bodies. Studies show that **80% of office workers** experience back pain at some point in their careers.
 
-At Healex Physiotherapy, we see countless patients whose pain originates from poor desk ergonomics and prolonged sitting. The good news? Simple stretches performed throughout the day can dramatically reduce your risk.
+At RestoreFlex Physiotherapy, we see countless patients whose pain originates from poor desk ergonomics and prolonged sitting. The good news? Simple stretches performed throughout the day can dramatically reduce your risk.
 
 ## 1. Neck Rolls and Tilts
 
@@ -74,7 +74,7 @@ We recommend setting a timer to remind yourself to stretch every 90 minutes. Eve
 
 **Pro tip:** Combine these stretches with a standing desk setup for maximum benefit. Our physiotherapists can also provide a personalized ergonomic assessment of your workspace.
 
-If you're experiencing persistent pain despite regular stretching, it may be time to consult with a professional. Book an appointment at Healex and let us help you work pain-free.
+If you're experiencing persistent pain despite regular stretching, it may be time to consult with a professional. Book an appointment at RestoreFlex and let us help you work pain-free.
     `.trim(),
     category: 'workplace',
     author: 'Dr. Arjun Mehta',
@@ -93,7 +93,7 @@ If you're experiencing persistent pain despite regular stretching, it may be tim
     content: `
 ## Understanding Sports Injuries
 
-Sports injuries affect athletes of all levels, from weekend warriors to professional competitors. At Healex, we've helped thousands of athletes return to peak performance through structured rehabilitation programs.
+Sports injuries affect athletes of all levels, from weekend warriors to professional competitors. At RestoreFlex, we've helped thousands of athletes return to peak performance through structured rehabilitation programs.
 
 The key to successful recovery lies in understanding the nature of your injury and following a systematic approach to healing.
 
@@ -147,7 +147,7 @@ The best injury is one that never happens. Our sports physiotherapy programs inc
 - Strength and conditioning guidance
 - Movement analysis and correction
 
-At Healex, we don't just treat injuries — we help you become more resilient and perform better than before. Book a sports injury consultation today.
+At RestoreFlex, we don't just treat injuries — we help you become more resilient and perform better than before. Book a sports injury consultation today.
     `.trim(),
     category: 'sports',
     author: 'Dr. Arjun Mehta',
@@ -168,7 +168,7 @@ At Healex, we don't just treat injuries — we help you become more resilient an
 
 Chronic pain — defined as pain lasting more than 3 months — affects an estimated **1 in 5 adults** worldwide. Unlike acute pain, chronic pain often persists beyond the normal healing time and can significantly impact quality of life.
 
-At Healex Physiotherapy, we specialize in helping patients break free from the cycle of chronic pain using evidence-based, drug-free approaches.
+At RestoreFlex Physiotherapy, we specialize in helping patients break free from the cycle of chronic pain using evidence-based, drug-free approaches.
 
 ## How Physiotherapy Addresses Chronic Pain
 
@@ -235,7 +235,7 @@ If you're living with chronic pain, you don't have to suffer in silence. Our chr
 4. Discuss your goals and expectations
 5. Create a personalized treatment plan
 
-Book your chronic pain consultation at Healex today and take the first step toward a better quality of life.
+Book your chronic pain consultation at RestoreFlex today and take the first step toward a better quality of life.
     `.trim(),
     category: 'pain-management',
     author: 'Dr. Arjun Mehta',

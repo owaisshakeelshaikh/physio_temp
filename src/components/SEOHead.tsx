@@ -12,11 +12,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
   ogImage = 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-  ogUrl = 'https://healex.com',
+  ogUrl = 'https://RestoreFlex.com',
   ogType = 'website',
 }) => {
   useEffect(() => {
-    document.title = `${title} | Healex Physiotherapy`;
+    document.title = `${title} | RestoreFlex Physiotherapy`;
 
     const setMeta = (name: string, content: string, attr = 'name') => {
       let el = document.querySelector(`meta[${attr}="${name}"]`);
@@ -29,13 +29,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     };
 
     setMeta('description', description);
-    setMeta('og:title', `${title} | Healex Physiotherapy`, 'property');
+    setMeta('og:title', `${title} | RestoreFlex Physiotherapy`, 'property');
     setMeta('og:description', description, 'property');
     setMeta('og:image', ogImage, 'property');
     setMeta('og:url', ogUrl, 'property');
     setMeta('og:type', ogType, 'property');
     setMeta('twitter:card', 'summary_large_image');
-    setMeta('twitter:title', `${title} | Healex Physiotherapy`);
+    setMeta('twitter:title', `${title} | RestoreFlex Physiotherapy`);
     setMeta('twitter:description', description);
     setMeta('twitter:image', ogImage);
   }, [title, description, ogImage, ogUrl, ogType]);

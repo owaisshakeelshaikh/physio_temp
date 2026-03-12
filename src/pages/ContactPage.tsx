@@ -11,7 +11,7 @@ const ContactPage: React.FC = () => {
   return (
     <PageTransition>
     <div className="min-h-screen dark:bg-darkBg">
-      <SEOHead title="Contact" description="Get in touch with Healex Physiotherapy. Book your appointment, call us, or visit our clinic for expert physiotherapy care." />
+      <SEOHead title="Contact" description="Get in touch with RestoreFlex Physiotherapy. Book your appointment, call us, or visit our clinic for expert physiotherapy care." />
       <Navbar />
       <Contact />
       <ScrollToTop />

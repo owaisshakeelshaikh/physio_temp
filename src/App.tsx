@@ -23,22 +23,25 @@ const LoadingSpinner = () => (
 
 function AnimatedRoutes() {
   const location = useLocation();
+  
   return (
-    <AnimatePresence mode="wait">
-      <Suspense fallback={<LoadingSpinner />}>
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/:slug" element={<BlogPostPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/doctor/:slug" element={<DoctorProfilePage />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
-        </Routes>
-      </Suspense>
-    </AnimatePresence>
+    <div>
+      <AnimatePresence mode="wait" key={location.pathname}>
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes location={location}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/doctor/:slug" element={<DoctorProfilePage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+          </Routes>
+        </Suspense>
+      </AnimatePresence>
+    </div>
   );
 }
 

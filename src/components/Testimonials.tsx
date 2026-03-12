@@ -9,21 +9,21 @@ const Testimonials: React.FC = () => {
     {
       id: 1,
       name: "Sarah Johnson",
-      text: "The team at Healex helped me recover from my knee surgery faster than I expected. Their personalized approach and expertise made all the difference in my rehabilitation journey.",
+      text: "The team at RestoreFlex helped me recover from my knee surgery faster than I expected. Their personalized approach and expertise made all the difference in my rehabilitation journey.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1494790108755-2616b332c5ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
     },
     {
       id: 2,
       name: "Michael Chen",
-      text: "I've been dealing with chronic back pain for years. After just a few sessions at Healex, I'm finally pain-free and able to enjoy my active lifestyle again. Highly recommended!",
+      text: "I've been dealing with chronic back pain for years. After just a few sessions at RestoreFlex, I'm finally pain-free and able to enjoy my active lifestyle again. Highly recommended!",
       rating: 5,
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
     },
     {
       id: 3,
       name: "Emily Rodriguez",
-      text: "The physiotherapists here are truly amazing. They took the time to understand my specific needs and created a treatment plan that worked perfectly for me. Thank you, Healex team!",
+      text: "The physiotherapists here are truly amazing. They took the time to understand my specific needs and created a treatment plan that worked perfectly for me. Thank you, RestoreFlex team!",
       rating: 5,
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
     }

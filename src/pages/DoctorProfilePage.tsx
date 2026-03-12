@@ -16,7 +16,7 @@ const doctor = {
   experience: '15+ Years',
   patients: '10,000+',
   rating: '4.9',
-  bio: 'Dr. Arjun Mehta is a highly skilled physiotherapist with over 15 years of clinical experience. He founded Healex Physiotherapy with a vision to provide world-class, evidence-based physiotherapy care that transforms lives. His approach combines cutting-edge techniques with compassionate patient care.',
+  bio: 'Dr. Arjun Mehta is a highly skilled physiotherapist with over 15 years of clinical experience. He founded RestoreFlex Physiotherapy with a vision to provide world-class, evidence-based physiotherapy care that transforms lives. His approach combines cutting-edge techniques with compassionate patient care.',
   education: [
     { degree: 'Doctor of Physical Therapy (DPT)', institution: 'Johns Hopkins University', year: '2009' },
     { degree: 'Master of Science in Sports Medicine', institution: 'Stanford University', year: '2006' },
@@ -69,8 +69,8 @@ const DoctorProfilePage: React.FC = () => {
       <div className="min-h-screen dark:bg-darkBg">
         <SEOHead
           title={doctor.name}
-          description={`${doctor.name} - ${doctor.title} at Healex Physiotherapy. ${doctor.experience} experience, ${doctor.patients} patients treated.`}
-          ogUrl={`https://healex.com/doctor/${doctor.slug}`}
+          description={`${doctor.name} - ${doctor.title} at RestoreFlex Physiotherapy. ${doctor.experience} experience, ${doctor.patients} patients treated.`}
+          ogUrl={`https://RestoreFlex.com/doctor/${doctor.slug}`}
         />
         <Navbar />
 

@@ -84,7 +84,7 @@ const AboutSection: React.FC = () => {
                 <span className="text-primary font-semibold text-sm uppercase tracking-wide">About Us</span>
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white font-poppins mb-6">
-                Welcome to Healex Physiotherapy Clinic
+                Welcome to RestoreFlex Physiotherapy Clinic
               </h2>
             </div>
 

@@ -23,7 +23,7 @@ const Home: React.FC = () => {
       <div className="min-h-screen dark:bg-darkBg">
         <SEOHead
           title="Home"
-          description="Healex Physiotherapy Clinic offers expert physiotherapy services including sports rehabilitation, chronic pain management, and more. Book your appointment today."
+          description="RestoreFlex Physiotherapy Clinic offers expert physiotherapy services including sports rehabilitation, chronic pain management, and more. Book your appointment today."
         />
         <Navbar />
         <Hero />

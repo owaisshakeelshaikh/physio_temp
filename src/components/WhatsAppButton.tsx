@@ -2,7 +2,7 @@ import React from 'react';
 
 const WhatsAppButton: React.FC = () => {
   const phoneNumber = '+1234567890'; // Replace with your actual WhatsApp number
-  const message = encodeURIComponent('Hi! I would like to book an appointment at Healex Physiotherapy.');
+  const message = encodeURIComponent('Hi! I would like to book an appointment at RestoreFlex Physiotherapy.');
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 

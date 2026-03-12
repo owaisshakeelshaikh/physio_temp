@@ -1,4 +1,4 @@
-# Healex Physiotherapy Clinic
+# RestoreFlex Physiotherapy Clinic
 
 A modern, responsive physiotherapy clinic website built with React, TypeScript, and Tailwind CSS. Features smooth animations, intuitive navigation, and a professional design optimized for patient engagement.
 
@@ -199,11 +199,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-**Healex Physiotherapy Clinic**
+**RestoreFlex Physiotherapy Clinic**
 - 📍 [Your Address Here]
 - 📞 (555) 123-4567
-- 📧 info@healexphysio.com
-- 🌐 [www.healexphysio.com](https://www.healexphysio.com)
+- 📧 info@RestoreFlexphysio.com
+- 🌐 [www.RestoreFlexphysio.com](https://www.RestoreFlexphysio.com)
 
 ## 🙏 Acknowledgments
 
@@ -214,4 +214,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ for Healex Physiotherapy Clinic**
+**Built with ❤️ for RestoreFlex Physiotherapy Clinic**

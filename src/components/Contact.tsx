@@ -121,7 +121,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">Email</h4>
-                    <p className="text-gray-600 dark:text-gray-300">info@healex.com</p>
+                    <p className="text-gray-600 dark:text-gray-300">info@RestoreFlex.com</p>
                     <p className="text-sm text-gray-500 dark:text-gray-400">24/7 Support</p>
                   </div>
                 </div>
@@ -215,7 +215,7 @@ const Contact: React.FC = () => {
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Appointment Request Received!</h3>
-                  <p className="text-gray-600 dark:text-gray-300">Thank you for booking with Healex. We'll contact you within 24 hours to confirm your appointment.</p>
+                  <p className="text-gray-600 dark:text-gray-300">Thank you for booking with RestoreFlex. We'll contact you within 24 hours to confirm your appointment.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
