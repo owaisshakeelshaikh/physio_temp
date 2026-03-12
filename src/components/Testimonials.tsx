@@ -90,14 +90,14 @@ const Testimonials: React.FC = () => {
             </div>
 
             {/* Testimonial Card */}
-            <div className="bg-white rounded-2xl p-8 shadow-xl hover-lift animate-scale">
+            <div className="bg-white dark:bg-darkCard rounded-2xl p-8 shadow-xl hover-lift animate-scale">
               {/* Rating */}
               <div className="flex mb-6">
                 {renderStars(testimonials[currentTestimonial].rating)}
               </div>
 
               {/* Quote */}
-              <blockquote className="text-gray-700 text-lg mb-8 italic">
+              <blockquote className="text-gray-700 dark:text-gray-300 text-lg mb-8 italic">
                 "{testimonials[currentTestimonial].text}"
               </blockquote>
 
@@ -110,8 +110,8 @@ const Testimonials: React.FC = () => {
                     className="w-12 h-12 rounded-full object-cover hover-scale"
                   />
                   <div>
-                    <h4 className="font-semibold text-gray-900">{testimonials[currentTestimonial].name}</h4>
-                    <p className="text-sm text-gray-600">Verified Patient</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">{testimonials[currentTestimonial].name}</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Verified Patient</p>
                   </div>
                 </div>
               </div>

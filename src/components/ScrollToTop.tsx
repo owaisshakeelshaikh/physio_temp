@@ -39,7 +39,7 @@ const ScrollToTop: React.FC = () => {
           <div className="absolute inset-0 bg-primary rounded-full animate-ping opacity-25"></div>
           
           {/* Main Button */}
-          <div className="relative bg-gradient-to-r from-primary to-primary text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 group-hover:-translate-y-1 border-4 border-white">
+          <div className="relative bg-gradient-to-r from-primary to-primary text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 group-hover:-translate-y-1 border-4 border-white dark:border-darkCard">
             <svg 
               className="w-6 h-6" 
               fill="none" 

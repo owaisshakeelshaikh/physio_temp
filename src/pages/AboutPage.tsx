@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import WhatsAppButton from '../components/WhatsAppButton';
+import SEOHead from '../components/SEOHead';
+import PageTransition from '../components/PageTransition';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const AboutPage: React.FC = () => {
@@ -21,7 +23,9 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <PageTransition>
+    <div className="min-h-screen dark:bg-darkBg">
+      <SEOHead title="About Us" description="Learn about Healex Physiotherapy - over 15 years of dedicated physiotherapy care, transforming lives through expert treatment and compassionate healing." />
       <Navbar />
       
       {/* Hero Section */}
@@ -38,7 +42,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Our Story */}
-      <section ref={storyRef} className={`py-24 bg-white ${storyVisible ? 'animate-fadeIn' : 'scroll-animate'}`}>
+      <section ref={storyRef} className={`py-24 bg-white dark:bg-darkBg ${storyVisible ? 'animate-fadeIn' : 'scroll-animate'}`}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className={`storyVisible ? 'animate-fadeInLeft animate-stagger-1' : ''}`}>
@@ -49,23 +53,23 @@ const AboutPage: React.FC = () => {
               />
             </div>
             <div className={`space-y-6 ${storyVisible ? 'animate-fadeInRight animate-stagger-2' : ''}`}>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 font-poppins">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white font-poppins">
                 Our Story
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                 Founded in 2009 by Dr. Sarah Johnson, Healex Physiotherapy began as a small clinic with a simple mission: to provide exceptional, personalized care that helps patients reclaim their quality of life.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                 Today, we've grown into a multi-location practice serving thousands of patients each year, but our core values remain the same: compassion, excellence, and a commitment to helping every patient achieve their optimal health.
               </p>
               <div className="grid grid-cols-2 gap-6 pt-6">
-                <div className={`bg-softBg rounded-xl p-6 ${storyVisible ? 'animate-fadeInUp animate-stagger-3' : ''}`}>
+                <div className={`bg-softBg dark:bg-darkCard rounded-xl p-6 ${storyVisible ? 'animate-fadeInUp animate-stagger-3' : ''}`}>
                   <div className="text-3xl font-bold text-primary mb-2">15+</div>
-                  <div className="text-gray-600">Years of Excellence</div>
+                  <div className="text-gray-600 dark:text-gray-400">Years of Excellence</div>
                 </div>
-                <div className={`bg-softBg rounded-xl p-6 ${storyVisible ? 'animate-fadeInUp animate-stagger-4' : ''}`}>
+                <div className={`bg-softBg dark:bg-darkCard rounded-xl p-6 ${storyVisible ? 'animate-fadeInUp animate-stagger-4' : ''}`}>
                   <div className="text-3xl font-bold text-primary mb-2">10,000+</div>
-                  <div className="text-gray-600">Patients Treated</div>
+                  <div className="text-gray-600 dark:text-gray-400">Patients Treated</div>
                 </div>
               </div>
             </div>
@@ -74,13 +78,13 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Mission & Values */}
-      <section ref={valuesRef} className={`py-24 bg-softBg ${valuesVisible ? 'animate-fadeIn' : 'scroll-animate'}`}>
+      <section ref={valuesRef} className={`py-24 bg-softBg dark:bg-gray-900 ${valuesVisible ? 'animate-fadeIn' : 'scroll-animate'}`}>
         <div className="max-w-7xl mx-auto px-6">
           <div className={`text-center mb-16 ${valuesVisible ? 'animate-fadeInDown animate-stagger-1' : ''}`}>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 font-poppins mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white font-poppins mb-4">
               Our Mission & Values
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </div>
@@ -120,15 +124,15 @@ const AboutPage: React.FC = () => {
             ].map((value, index) => (
               <div 
                 key={index} 
-                className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 ${
+                className={`bg-white dark:bg-darkCard rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-transparent dark:border-darkBorder ${
                   valuesVisible ? `animate-fadeInUp animate-stagger-${index + 2}` : ''
                 } hover-lift`}
               >
                 <div className="bg-primary/10 rounded-full p-4 w-16 h-16 mb-6">
                   <span className="text-2xl">{value.icon}</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{value.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{value.description}</p>
               </div>
             ))}
           </div>
@@ -136,13 +140,13 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Timeline */}
-      <section ref={timelineRef} className={`py-24 bg-white ${timelineVisible ? 'animate-fadeIn' : 'scroll-animate'}`}>
+      <section ref={timelineRef} className={`py-24 bg-white dark:bg-darkBg ${timelineVisible ? 'animate-fadeIn' : 'scroll-animate'}`}>
         <div className="max-w-7xl mx-auto px-6">
           <div className={`text-center mb-16 ${timelineVisible ? 'animate-fadeInDown animate-stagger-1' : ''}`}>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 font-poppins mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white font-poppins mb-4">
               Our Journey
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               15 years of growth, innovation, and patient success stories
             </p>
           </div>
@@ -153,13 +157,13 @@ const AboutPage: React.FC = () => {
               <div key={index} className={`flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                 <div className="w-1/2"></div>
                 <div className="relative flex items-center justify-center w-8 h-8 bg-primary rounded-full">
-                  <div className="w-4 h-4 bg-white rounded-full"></div>
+                  <div className="w-4 h-4 bg-white dark:bg-darkBg rounded-full"></div>
                 </div>
                 <div className={`w-1/2 px-8 ${timelineVisible ? `animate-fadeIn${index % 2 === 0 ? 'Left' : 'Right'} animate-stagger-${index + 2}` : ''}`}>
-                  <div className="bg-softBg rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift">
+                  <div className="bg-softBg dark:bg-darkCard rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift border border-transparent dark:border-darkBorder">
                     <div className="text-primary font-bold text-lg mb-2">{milestone.year}</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{milestone.title}</h3>
-                    <p className="text-gray-600">{milestone.description}</p>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{milestone.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-300">{milestone.description}</p>
                   </div>
                 </div>
               </div>
@@ -200,6 +204,7 @@ const AboutPage: React.FC = () => {
       <Footer />
       <WhatsAppButton />
     </div>
+    </PageTransition>
   );
 };
 

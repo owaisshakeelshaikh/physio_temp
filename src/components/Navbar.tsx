@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useDarkMode } from '../hooks/useDarkMode';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { isDark, toggle: toggleDark } = useDarkMode();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,8 +63,8 @@ const Navbar: React.FC = () => {
       {/* Main Navigation */}
       <nav className={`z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'fixed top-4 left-4 right-4 bg-white shadow-lg py-2 rounded-3xl' 
-          : 'sticky top-0 bg-white shadow-md py-4'
+          ? 'fixed top-4 left-4 right-4 bg-white dark:bg-darkCard shadow-lg py-2 rounded-3xl' 
+          : 'sticky top-0 bg-white dark:bg-darkBg shadow-md dark:shadow-darkBorder/20 py-4'
       }`}>
         <div className="max-w-7xl mx-auto px-6">
           <div className={`flex justify-between items-center transition-all duration-300 ${
@@ -84,43 +86,58 @@ const Navbar: React.FC = () => {
             <div className="hidden lg:flex items-center space-x-8">
               <Link 
                 to="/" 
-                className="text-gray-700 hover:text-primary transition-all duration-300 relative group font-medium"
+                className="text-gray-700 dark:text-gray-200 hover:text-primary transition-all duration-300 relative group font-medium"
               >
                 Home
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/80 transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/about" 
-                className="text-gray-700 hover:text-primary transition-all duration-300 relative group font-medium"
+                className="text-gray-700 dark:text-gray-200 hover:text-primary transition-all duration-300 relative group font-medium"
               >
                 About Us
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/80 transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/services" 
-                className="text-gray-700 hover:text-primary transition-all duration-300 relative group font-medium"
+                className="text-gray-700 dark:text-gray-200 hover:text-primary transition-all duration-300 relative group font-medium"
               >
                 Our Services
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/80 transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/blog" 
-                className="text-gray-700 hover:text-primary transition-all duration-300 relative group font-medium"
+                className="text-gray-700 dark:text-gray-200 hover:text-primary transition-all duration-300 relative group font-medium"
               >
                 Blog
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/80 transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/contact" 
-                className="text-gray-700 hover:text-primary transition-all duration-300 relative group font-medium"
+                className="text-gray-700 dark:text-gray-200 hover:text-primary transition-all duration-300 relative group font-medium"
               >
                 Contact
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/80 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </div>
 
-            {/* CTA Button */}
-            <div className="hidden lg:block">
+            {/* Dark Mode Toggle + CTA */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <button
+                onClick={toggleDark}
+                className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-yellow-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+                aria-label="Toggle dark mode"
+              >
+                {isDark ? (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                  </svg>
+                )}
+              </button>
               <Link 
                 to="/contact" 
                 className={`bg-gradient-to-r from-primary to-primary/90 text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-medium ${
@@ -131,11 +148,26 @@ const Navbar: React.FC = () => {
               </Link>
             </div>
 
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">
+            {/* Mobile: Dark Toggle + Menu Button */}
+            <div className="lg:hidden flex items-center space-x-2">
+              <button
+                onClick={toggleDark}
+                className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-yellow-300 transition-all duration-300"
+                aria-label="Toggle dark mode"
+              >
+                {isDark ? (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                  </svg>
+                )}
+              </button>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-700 hover:text-primary focus:outline-none p-2"
+                className="text-gray-700 dark:text-gray-200 hover:text-primary focus:outline-none p-2"
               >
                 <svg className="h-6 w-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                   {isMenuOpen ? (
@@ -152,38 +184,38 @@ const Navbar: React.FC = () => {
           <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
             isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}>
-            <div className="py-4 space-y-2 border-t">
+            <div className="py-4 space-y-2 border-t dark:border-darkBorder">
               <Link 
                 to="/" 
-                className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-softBg rounded-lg transition-all duration-300 font-medium"
+                className="block px-4 py-3 text-gray-700 dark:text-gray-200 hover:text-primary hover:bg-softBg dark:hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link 
                 to="/about" 
-                className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-softBg rounded-lg transition-all duration-300 font-medium"
+                className="block px-4 py-3 text-gray-700 dark:text-gray-200 hover:text-primary hover:bg-softBg dark:hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Us
               </Link>
               <Link 
                 to="/services" 
-                className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-softBg rounded-lg transition-all duration-300 font-medium"
+                className="block px-4 py-3 text-gray-700 dark:text-gray-200 hover:text-primary hover:bg-softBg dark:hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Our Services
               </Link>
               <Link 
                 to="/blog" 
-                className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-softBg rounded-lg transition-all duration-300 font-medium"
+                className="block px-4 py-3 text-gray-700 dark:text-gray-200 hover:text-primary hover:bg-softBg dark:hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
               </Link>
               <Link 
                 to="/contact" 
-                className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-softBg rounded-lg transition-all duration-300 font-medium"
+                className="block px-4 py-3 text-gray-700 dark:text-gray-200 hover:text-primary hover:bg-softBg dark:hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact

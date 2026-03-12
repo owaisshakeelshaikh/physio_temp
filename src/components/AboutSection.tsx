@@ -8,7 +8,7 @@ const AboutSection: React.FC = () => {
   return (
     <section 
       ref={sectionRef}
-      className={`relative py-24 bg-white overflow-hidden ${sectionVisible ? 'animate-fadeIn' : 'scroll-animate'}`}
+      className={`relative py-24 bg-white dark:bg-darkBg overflow-hidden ${sectionVisible ? 'animate-fadeIn' : 'scroll-animate'}`}
     >
       {/* Animated Background Shapes */}
       <div className="absolute inset-0 overflow-hidden">
@@ -42,7 +42,7 @@ const AboutSection: React.FC = () => {
               </div>
               
               {/* Secondary Image */}
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-darkCard">
                 <img 
                   src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
                   alt="Therapy Session"
@@ -54,7 +54,7 @@ const AboutSection: React.FC = () => {
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent/20 rounded-full blur-xl"></div>
               
               {/* Experience Badge */}
-              <div className={`absolute top-8 -right-8 bg-white rounded-2xl p-6 shadow-xl hover-lift ${
+              <div className={`absolute top-8 -right-8 bg-white dark:bg-darkCard rounded-2xl p-6 shadow-xl hover-lift ${
                 sectionVisible ? 'animate-bounce animate-stagger-2' : ''
               }`}>
                 <div className="flex items-center space-x-4">
@@ -65,10 +65,10 @@ const AboutSection: React.FC = () => {
                   </div>
                   <div>
                     <div className="flex items-baseline">
-                      <h3 className={`text-3xl font-bold text-gray-900 ${sectionVisible ? 'animate-pulse' : ''}`}>15</h3>
+                      <h3 className={`text-3xl font-bold text-gray-900 dark:text-white ${sectionVisible ? 'animate-pulse' : ''}`}>15</h3>
                       <span className="text-xl font-bold text-primary ml-1">+</span>
                     </div>
-                    <p className="text-sm text-gray-600">Years Experience</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Years Experience</p>
                   </div>
                 </div>
               </div>
@@ -83,13 +83,13 @@ const AboutSection: React.FC = () => {
                 <div className="w-12 h-0.5 bg-primary mr-4"></div>
                 <span className="text-primary font-semibold text-sm uppercase tracking-wide">About Us</span>
               </div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 font-poppins mb-6">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white font-poppins mb-6">
                 Welcome to Healex Physiotherapy Clinic
               </h2>
             </div>
 
             {/* Description */}
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
               Dr. Sarah Johnson and our team of expert physiotherapists are dedicated to optimizing your health and well-being. Our clinic combines evidence-based treatment techniques with compassionate care to help you achieve your recovery goals.
             </p>
 
@@ -102,8 +102,8 @@ const AboutSection: React.FC = () => {
                   </svg>
                 </div>
                 <div>
-                  <h5 className="text-xl font-bold text-gray-900 mb-2">Trusted Clinic</h5>
-                  <p className="text-gray-600">5 stars Google rating, 1000+ client reviews with 99% satisfaction rate.</p>
+                  <h5 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Trusted Clinic</h5>
+                  <p className="text-gray-600 dark:text-gray-300">5 stars Google rating, 1000+ client reviews with 99% satisfaction rate.</p>
                 </div>
               </li>
               
@@ -114,8 +114,8 @@ const AboutSection: React.FC = () => {
                   </svg>
                 </div>
                 <div>
-                  <h5 className="text-xl font-bold text-gray-900 mb-2">Expert Therapists</h5>
-                  <p className="text-gray-600">Driven by passion, fueled by expertise and years of specialized training.</p>
+                  <h5 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Expert Therapists</h5>
+                  <p className="text-gray-600 dark:text-gray-300">Driven by passion, fueled by expertise and years of specialized training.</p>
                 </div>
               </li>
             </ul>

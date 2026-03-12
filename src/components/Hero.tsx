@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
   const { ref: contentRef, isIntersecting: contentVisible } = useScrollAnimation();
 
   return (
-    <section id="home" className="relative overflow-hidden bg-gradient-to-br from-softBg to-white">
+    <section id="home" className="relative overflow-hidden bg-gradient-to-br from-softBg to-white dark:from-darkBg dark:to-gray-900">
       {/* Background decorative shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float"></div>
@@ -28,12 +28,12 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 font-poppins leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white font-poppins leading-tight">
               Transforming Pain Into Strength One Step at a Time
             </h1>
 
             {/* Description */}
-            <p className="text-lg text-gray-600 max-w-lg">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-lg">
               Our expert physiotherapists provide personalized treatment plans to help you recover from injuries, manage chronic pain, and achieve optimal physical function.
             </p>
 
@@ -56,11 +56,11 @@ const Hero: React.FC = () => {
             <div className="grid grid-cols-2 gap-8 pt-8">
               <div className="animate-fadeInUp animate-stagger-3">
                 <h3 className="text-3xl font-bold text-primary mb-2">10+</h3>
-                <p className="text-gray-600">Specialized Treatments</p>
+                <p className="text-gray-600 dark:text-gray-400">Specialized Treatments</p>
               </div>
               <div className="animate-fadeInUp animate-stagger-4">
                 <h3 className="text-3xl font-bold text-primary mb-2">15+</h3>
-                <p className="text-gray-600">Years Experience</p>
+                <p className="text-gray-600 dark:text-gray-400">Years Experience</p>
               </div>
             </div>
           </div>
@@ -79,21 +79,21 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Floating Patient Avatars */}
-            <div className="absolute -top-4 -right-4 bg-white rounded-full p-2 shadow-lg animate-float">
+            <div className="absolute -top-4 -right-4 bg-white dark:bg-darkCard rounded-full p-2 shadow-lg animate-float">
               <img 
                 src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
                 alt="Patient"
                 className="w-12 h-12 rounded-full"
               />
             </div>
-            <div className="absolute top-8 -right-8 bg-white rounded-full p-2 shadow-lg animate-float animate-stagger-1">
+            <div className="absolute top-8 -right-8 bg-white dark:bg-darkCard rounded-full p-2 shadow-lg animate-float animate-stagger-1">
               <img 
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
                 alt="Patient"
                 className="w-10 h-10 rounded-full"
               />
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-white rounded-full p-2 shadow-lg animate-float animate-stagger-2">
+            <div className="absolute -bottom-4 -left-4 bg-white dark:bg-darkCard rounded-full p-2 shadow-lg animate-float animate-stagger-2">
               <img 
                 src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
                 alt="Patient"
@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Treatment Card */}
-            <div className="absolute bottom-8 left-8 bg-white rounded-xl p-4 shadow-lg hover-lift animate-bounce">
+            <div className="absolute bottom-8 left-8 bg-white dark:bg-darkCard rounded-xl p-4 shadow-lg hover-lift animate-bounce">
               <div className="flex items-center space-x-3">
                 <div className="bg-primary/10 rounded-full p-2">
                   <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,8 +110,8 @@ const Hero: React.FC = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">10+ Specialized Treatments</h4>
-                  <p className="text-sm text-gray-600">Custom care plans</p>
+                  <h4 className="font-semibold text-gray-900 dark:text-white">10+ Specialized Treatments</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Custom care plans</p>
                 </div>
               </div>
             </div>

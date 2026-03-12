@@ -121,14 +121,14 @@ const InstagramReels: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-softBg">
+    <section className="py-20 bg-softBg dark:bg-darkBg">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Follow Our <span className="text-primary">Instagram Reels</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Get quick tips, exercise demonstrations, and behind-the-scenes content from our physiotherapy experts. 
             Follow us for daily health and wellness inspiration!
           </p>
@@ -144,7 +144,7 @@ const InstagramReels: React.FC = () => {
               </svg>
               @healexphysio
             </a>
-            <span className="text-gray-500">for more content</span>
+            <span className="text-gray-500 dark:text-gray-400">for more content</span>
           </div>
         </div>
 
@@ -157,7 +157,7 @@ const InstagramReels: React.FC = () => {
               onClick={() => handleReelClick(reel.embedUrl)}
             >
               {/* Reel Thumbnail */}
-              <div className="relative aspect-[9/16] bg-gray-200 rounded-lg overflow-hidden shadow-md">
+              <div className="relative aspect-[9/16] bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
                 <img 
                   src={reel.thumbnail} 
                   alt={reel.title}
@@ -215,10 +215,10 @@ const InstagramReels: React.FC = () => {
 
               {/* Reel Info */}
               <div className="mt-3">
-                <h3 className="text-sm font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300 line-clamp-1">
+                <h3 className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-primary transition-colors duration-300 line-clamp-1">
                   {reel.title}
                 </h3>
-                <p className="text-gray-600 text-xs mt-1 line-clamp-2">{reel.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 text-xs mt-1 line-clamp-2">{reel.description}</p>
               </div>
             </div>
           ))}
@@ -261,8 +261,8 @@ const InstagramReels: React.FC = () => {
             disabled={currentPage === 1}
             className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
               currentPage === 1
-                ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                : 'bg-white text-primary hover:bg-primary hover:text-white shadow-md hover:shadow-lg'
+                ? 'bg-gray-100 dark:bg-gray-800 text-gray-400 cursor-not-allowed'
+                : 'bg-white dark:bg-darkCard text-primary hover:bg-primary hover:text-white shadow-md hover:shadow-lg'
             }`}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -278,7 +278,7 @@ const InstagramReels: React.FC = () => {
                 className={`w-10 h-10 rounded-lg font-medium transition-all duration-300 ${
                   currentPage === page
                     ? 'bg-primary text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-primary hover:text-white shadow-md hover:shadow-lg'
+                    : 'bg-white dark:bg-darkCard text-gray-700 dark:text-gray-200 hover:bg-primary hover:text-white shadow-md hover:shadow-lg'
                 }`}
               >
                 {page}
@@ -291,8 +291,8 @@ const InstagramReels: React.FC = () => {
             disabled={currentPage === totalPages}
             className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
               currentPage === totalPages
-                ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                : 'bg-white text-primary hover:bg-primary hover:text-white shadow-md hover:shadow-lg'
+                ? 'bg-gray-100 dark:bg-gray-800 text-gray-400 cursor-not-allowed'
+                : 'bg-white dark:bg-darkCard text-primary hover:bg-primary hover:text-white shadow-md hover:shadow-lg'
             }`}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -303,11 +303,11 @@ const InstagramReels: React.FC = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8 border border-primary/20">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="bg-gradient-to-r from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 rounded-2xl p-8 border border-primary/20">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Stay Updated with Our Latest Content
             </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
               Follow us on Instagram for daily exercise tips, recovery techniques, and exclusive content 
               to help you maintain optimal health and wellness.
             </p>
