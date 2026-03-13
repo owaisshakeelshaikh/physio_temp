@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import WhatsAppButton from '../components/WhatsAppButton';
+import SEOHead from '../components/SEOHead';
+import PageTransition from '../components/PageTransition';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const ServicesPage: React.FC = () => {
@@ -131,7 +133,9 @@ const ServicesPage: React.FC = () => {
     : services.filter(service => service.category === selectedCategory);
 
   return (
-    <div className="min-h-screen">
+    <PageTransition>
+    <div className="min-h-screen dark:bg-darkBg">
+      <SEOHead title="Services" description="Explore our comprehensive physiotherapy services including sports rehabilitation, orthopedic therapy, neurological rehab, and more." />
       <Navbar />
       
       {/* Hero Section */}
@@ -148,7 +152,7 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Service Categories */}
-      <section className="py-16 bg-white border-b">
+      <section className="py-16 bg-white dark:bg-darkBg border-b dark:border-darkBorder">
         <div className="max-w-7xl mx-auto px-6">
           <div className={`flex flex-wrap justify-center gap-4 ${heroVisible ? 'animate-fadeInUp animate-stagger-3' : ''}`}>
             {categories.map((category, index) => (
@@ -158,7 +162,7 @@ const ServicesPage: React.FC = () => {
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-primary text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    : 'bg-gray-100 dark:bg-darkCard text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700'
                 } ${heroVisible ? `animate-scaleUp animate-stagger-${index + 4}` : ''} hover-scale`}
               >
                 <span className="mr-2">{category.icon}</span>
@@ -170,13 +174,13 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-24 bg-softBg">
+      <section className="py-24 bg-softBg dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <div 
                 key={service.id} 
-                className={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group ${
+                className={`bg-white dark:bg-darkCard rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group border border-transparent dark:border-darkBorder ${
                   heroVisible ? `animate-fadeInUp animate-stagger-${index + 1}` : ''
                 } hover-lift`}
               >
@@ -187,7 +191,7 @@ const ServicesPage: React.FC = () => {
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                    <span className="text-sm font-medium text-gray-700">{service.price}</span>
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-800">{service.price}</span>
                   </div>
                 </div>
                 
@@ -195,16 +199,16 @@ const ServicesPage: React.FC = () => {
                   <div className="flex items-center mb-4">
                     <span className="text-3xl mr-3">{service.icon}</span>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-1">{service.title}</h3>
-                      <p className="text-sm text-gray-500">{service.duration}</p>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{service.title}</h3>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">{service.duration}</p>
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">{service.description}</p>
                   
                   <div className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-600 dark:text-gray-300">
                         <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                         </svg>
@@ -227,13 +231,13 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Treatment Process */}
-      <section ref={processRef} className={`py-24 bg-white ${processVisible ? 'animate-fadeIn' : 'scroll-animate'}`}>
+      <section ref={processRef} className={`py-24 bg-white dark:bg-darkBg ${processVisible ? 'animate-fadeIn' : 'scroll-animate'}`}>
         <div className="max-w-7xl mx-auto px-6">
           <div className={`text-center mb-16 ${processVisible ? 'animate-fadeInDown animate-stagger-1' : ''}`}>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 font-poppins mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white font-poppins mb-4">
               Our Treatment Process
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               A systematic approach to ensure optimal recovery
             </p>
           </div>
@@ -252,8 +256,8 @@ const ServicesPage: React.FC = () => {
                 <div className="bg-primary/10 rounded-full p-6 w-24 h-24 mx-auto mb-6 flex items-center justify-center hover-scale">
                   <span className="text-3xl font-bold text-primary">{item.step}</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{item.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
               </div>
             ))}
           </div>
@@ -261,14 +265,14 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Insurance & Pricing */}
-      <section ref={insuranceRef} className={`py-24 bg-softBg ${insuranceVisible ? 'animate-fadeIn' : 'scroll-animate'}`}>
+      <section ref={insuranceRef} className={`py-24 bg-softBg dark:bg-gray-900 ${insuranceVisible ? 'animate-fadeIn' : 'scroll-animate'}`}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12">
             <div className={`${insuranceVisible ? 'animate-fadeInLeft animate-stagger-1' : ''}`}>
-              <h2 className="text-3xl font-bold text-gray-900 font-poppins mb-6">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white font-poppins mb-6">
                 Insurance Coverage
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
                 We work with most major insurance providers to make your treatment affordable and accessible.
               </p>
               
@@ -285,24 +289,24 @@ const ServicesPage: React.FC = () => {
                 ].map((insurance, index) => (
                   <div 
                     key={index} 
-                    className={`bg-white rounded-lg p-4 flex items-center ${
+                    className={`bg-white dark:bg-darkCard rounded-lg p-4 flex items-center ${
                       insuranceVisible ? `animate-fadeInUp animate-stagger-${index + 2}` : ''
                     } hover-lift`}
                   >
                     <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                     </svg>
-                    <span className="text-gray-700">{insurance}</span>
+                    <span className="text-gray-700 dark:text-gray-200">{insurance}</span>
                   </div>
                 ))}
               </div>
             </div>
             
             <div className={`${insuranceVisible ? 'animate-fadeInRight animate-stagger-2' : ''}`}>
-              <h2 className="text-3xl font-bold text-gray-900 font-poppins mb-6">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white font-poppins mb-6">
                 Flexible Payment Options
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
                 We offer various payment options to fit your budget and financial situation.
               </p>
               
@@ -314,12 +318,12 @@ const ServicesPage: React.FC = () => {
                 ].map((option, index) => (
                   <div 
                     key={index} 
-                    className={`bg-white rounded-lg p-6 ${
+                    className={`bg-white dark:bg-darkCard rounded-lg p-6 ${
                       insuranceVisible ? `animate-fadeInUp animate-stagger-${index + 3}` : ''
                     } hover-lift`}
                   >
-                    <h3 className="font-bold text-gray-900 mb-2">{option.title}</h3>
-                    <p className="text-gray-600">{option.desc}</p>
+                    <h3 className="font-bold text-gray-900 dark:text-white mb-2">{option.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-300">{option.desc}</p>
                   </div>
                 ))}
               </div>
@@ -358,6 +362,7 @@ const ServicesPage: React.FC = () => {
       <Footer />
       <WhatsAppButton />
     </div>
+    </PageTransition>
   );
 };
 

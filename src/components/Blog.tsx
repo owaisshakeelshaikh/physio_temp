@@ -36,15 +36,15 @@ const Blog: React.FC = () => {
     <section 
       ref={sectionRef}
       id="blog" 
-      className={`py-24 bg-softBg ${sectionVisible ? 'animate-fadeIn' : 'scroll-animate'}`}
+      className={`py-24 bg-softBg dark:bg-gray-900 ${sectionVisible ? 'animate-fadeIn' : 'scroll-animate'}`}
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fadeInDown animate-stagger-1">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 font-poppins mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white font-poppins mb-4">
             Health Tips & Insights
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Stay informed with the latest physiotherapy tips, exercises, and wellness advice from our experts
           </p>
         </div>
@@ -54,7 +54,7 @@ const Blog: React.FC = () => {
           {blogPosts.map((post, index) => (
             <article 
               key={post.id} 
-              className={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group hover-lift ${
+              className={`bg-white dark:bg-darkCard rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group hover-lift border border-transparent dark:border-darkBorder ${
                 sectionVisible ? `animate-fadeInUp animate-stagger-${index + 1}` : 'scroll-animate'
               }`}
             >
@@ -75,7 +75,7 @@ const Blog: React.FC = () => {
               {/* Content */}
               <div className="p-6">
                 {/* Date */}
-                <div className="flex items-center text-sm text-gray-500 mb-3">
+                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                   </svg>
@@ -83,12 +83,12 @@ const Blog: React.FC = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary transition-colors duration-300">
                   {post.title}
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
 

@@ -6,7 +6,7 @@ const About: React.FC = () => {
   const { ref: sectionRef, isIntersecting: sectionVisible } = useScrollAnimation();
 
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-24 bg-white dark:bg-darkBg">
       <div className="max-w-7xl mx-auto px-6">
         <div 
           ref={sectionRef}
@@ -33,16 +33,16 @@ const About: React.FC = () => {
           {/* Right Content */}
           <div className="space-y-8 animate-fadeInRight animate-stagger-2">
             {/* Card with content */}
-            <div className="bg-softBg rounded-2xl p-8 shadow-lg hover-lift">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 font-poppins mb-6">
+            <div className="bg-softBg dark:bg-darkCard rounded-2xl p-8 shadow-lg hover-lift border border-transparent dark:border-darkBorder">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white font-poppins mb-6">
                 Your Journey to Stronger Healthier Body Start Here
               </h2>
               
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
                 At Healex Physiotherapy, we believe in a holistic approach to healing. Our team of experienced physiotherapists combines cutting-edge techniques with compassionate care to help you achieve your health goals.
               </p>
 
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
                 Whether you're recovering from an injury, managing chronic pain, or looking to improve your physical performance, we're here to support you every step of the way.
               </p>
 
@@ -55,13 +55,13 @@ const About: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="text-center animate-fadeInUp animate-stagger-3">
                 <div className="text-4xl font-bold text-primary mb-2">1500+</div>
-                <div className="text-gray-600 font-medium">Patients Treated</div>
-                <div className="text-sm text-gray-500 mt-1">Successfully recovered</div>
+                <div className="text-gray-600 dark:text-gray-300 font-medium">Patients Treated</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Successfully recovered</div>
               </div>
               <div className="text-center animate-fadeInUp animate-stagger-4">
                 <div className="text-4xl font-bold text-primary mb-2">99%</div>
-                <div className="text-gray-600 font-medium">Recovery Success Rate</div>
-                <div className="text-sm text-gray-500 mt-1">Patient satisfaction</div>
+                <div className="text-gray-600 dark:text-gray-300 font-medium">Recovery Success Rate</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Patient satisfaction</div>
               </div>
             </div>
           </div>

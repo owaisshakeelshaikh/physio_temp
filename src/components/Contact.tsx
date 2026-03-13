@@ -78,14 +78,14 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-softBg">
+    <section className="py-24 bg-softBg dark:bg-darkBg">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 font-poppins mb-4">
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white font-poppins mb-4">
             Book Your Appointment
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Take the first step towards recovery. Fill out the form below and our team will contact you within 24 hours.
           </p>
         </div>
@@ -94,8 +94,8 @@ const Contact: React.FC = () => {
           {/* Contact Information */}
           <div className="lg:col-span-1 space-y-8">
             {/* Contact Card */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 font-poppins">Get in Touch</h3>
+            <div className="bg-white dark:bg-darkCard rounded-2xl p-8 shadow-lg border border-transparent dark:border-darkBorder">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 font-poppins">Get in Touch</h3>
               
               <div className="space-y-6">
                 {/* Phone */}
@@ -106,9 +106,9 @@ const Contact: React.FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Phone</h4>
-                    <p className="text-gray-600">(555) 123-4567</p>
-                    <p className="text-sm text-gray-500">Mon-Sun: 8AM - 8PM</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">Phone</h4>
+                    <p className="text-gray-600 dark:text-gray-300">(555) 123-4567</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Mon-Sun: 8AM - 8PM</p>
                   </div>
                 </div>
 
@@ -120,9 +120,9 @@ const Contact: React.FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-600">info@healex.com</p>
-                    <p className="text-sm text-gray-500">24/7 Support</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">Email</h4>
+                    <p className="text-gray-600 dark:text-gray-300">info@healex.com</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">24/7 Support</p>
                   </div>
                 </div>
 
@@ -135,25 +135,25 @@ const Contact: React.FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Location</h4>
-                    <p className="text-gray-600">123 Health Street</p>
-                    <p className="text-gray-600">Medical District, MD 12345</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">Location</h4>
+                    <p className="text-gray-600 dark:text-gray-300">123 Health Street</p>
+                    <p className="text-gray-600 dark:text-gray-300">Medical District, MD 12345</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Emergency Contact */}
-            <div className="bg-accent/20 rounded-2xl p-6 border border-accent/30">
-              <h4 className="font-bold text-gray-900 mb-2">Emergency?</h4>
-              <p className="text-gray-700 mb-4">For urgent appointments, call our emergency line:</p>
+            <div className="bg-accent/20 dark:bg-accent/10 rounded-2xl p-6 border border-accent/30">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">Emergency?</h4>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">For urgent appointments, call our emergency line:</p>
               <a href="tel:555-999-0000" className="text-2xl font-bold text-accent">555-999-0000</a>
             </div>
 
             {/* Insurance Info */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h4 className="font-bold text-gray-900 mb-4">We Accept Most Insurance Plans</h4>
-              <ul className="space-y-2 text-gray-600">
+            <div className="bg-white dark:bg-darkCard rounded-2xl p-6 shadow-lg border border-transparent dark:border-darkBorder">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-4">We Accept Most Insurance Plans</h4>
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
@@ -206,25 +206,25 @@ const Contact: React.FC = () => {
               </div>
             )}
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-darkCard rounded-2xl p-8 shadow-lg border border-transparent dark:border-darkBorder">
               {isSubmitted ? (
                 <div className="text-center py-12">
-                  <div className="bg-green-100 rounded-full p-4 w-20 h-20 mx-auto mb-6">
+                  <div className="bg-green-100 dark:bg-green-900/30 rounded-full p-4 w-20 h-20 mx-auto mb-6">
                     <svg className="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Appointment Request Received!</h3>
-                  <p className="text-gray-600">Thank you for booking with Healex. We'll contact you within 24 hours to confirm your appointment.</p>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Appointment Request Received!</h3>
+                  <p className="text-gray-600 dark:text-gray-300">Thank you for booking with Healex. We'll contact you within 24 hours to confirm your appointment.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Personal Information */}
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Personal Information</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Personal Information</h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                           First Name *
                         </label>
                         <input
@@ -234,12 +234,12 @@ const Contact: React.FC = () => {
                           value={formData.firstName}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-300 dark:border-darkBorder rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 dark:text-white"
                           placeholder="John"
                         />
                       </div>
                       <div>
-                        <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                           Last Name *
                         </label>
                         <input
@@ -249,7 +249,7 @@ const Contact: React.FC = () => {
                           value={formData.lastName}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-300 dark:border-darkBorder rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 dark:text-white"
                           placeholder="Doe"
                         />
                       </div>
@@ -260,7 +260,7 @@ const Contact: React.FC = () => {
                   <div>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                           Email Address *
                         </label>
                         <input
@@ -270,12 +270,12 @@ const Contact: React.FC = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-300 dark:border-darkBorder rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 dark:text-white"
                           placeholder="john.doe@example.com"
                         />
                       </div>
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                           Phone Number *
                         </label>
                         <input
@@ -285,7 +285,7 @@ const Contact: React.FC = () => {
                           value={formData.phone}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-300 dark:border-darkBorder rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 dark:text-white"
                           placeholder="(555) 123-4567"
                         />
                       </div>
@@ -294,10 +294,10 @@ const Contact: React.FC = () => {
 
                   {/* Appointment Details */}
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Appointment Details</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Appointment Details</h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="preferredDate" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="preferredDate" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                           Preferred Date *
                         </label>
                         <input
@@ -307,11 +307,11 @@ const Contact: React.FC = () => {
                           value={formData.preferredDate}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-300 dark:border-darkBorder rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 dark:text-white"
                         />
                       </div>
                       <div>
-                        <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                           Preferred Time *
                         </label>
                         <select
@@ -320,7 +320,7 @@ const Contact: React.FC = () => {
                           value={formData.preferredTime}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-300 dark:border-darkBorder rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 dark:text-white"
                         >
                           <option value="">Select a time</option>
                           {timeSlots.map(time => (
@@ -333,7 +333,7 @@ const Contact: React.FC = () => {
 
                   {/* Service Selection */}
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Service Type *
                     </label>
                     <select
@@ -342,7 +342,7 @@ const Contact: React.FC = () => {
                       value={formData.service}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-darkBorder rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 dark:text-white"
                     >
                       <option value="">Select a service</option>
                       {services.map(service => (
@@ -353,7 +353,7 @@ const Contact: React.FC = () => {
 
                   {/* Additional Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Additional Information (Optional)
                     </label>
                     <textarea
@@ -362,7 +362,7 @@ const Contact: React.FC = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows={4}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-darkBorder rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 dark:text-white"
                       placeholder="Please describe your condition or any specific requirements..."
                     />
                   </div>
@@ -378,7 +378,7 @@ const Contact: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => window.location.href = 'tel:555-123-4567'}
-                      className="flex-1 bg-gray-200 text-gray-700 px-8 py-4 rounded-lg hover:bg-gray-300 transition-all duration-300 font-semibold text-lg"
+                      className="flex-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-8 py-4 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-300 font-semibold text-lg"
                     >
                       Call Instead
                     </button>
