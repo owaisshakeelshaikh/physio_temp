@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 
 const AboutPage = lazy(() => import('./pages/AboutPage'));
@@ -22,27 +21,21 @@ const LoadingSpinner = () => (
 );
 
 function AnimatedRoutes() {
-  const location = useLocation();
-  
-  const Presence = AnimatePresence as React.FC<{ mode?: string; children: React.ReactNode }>;
-  
   return (
     <div>
-      <Presence mode="wait">
-        <Suspense fallback={<LoadingSpinner />}>
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/blog/:slug" element={<BlogPostPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/doctor/:slug" element={<DoctorProfilePage />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-            <Route path="/terms-of-service" element={<TermsOfServicePage />} />
-          </Routes>
-        </Suspense>
-      </Presence>
+      <Suspense fallback={<LoadingSpinner />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/doctor/:slug" element={<DoctorProfilePage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }
