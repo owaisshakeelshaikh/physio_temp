@@ -17,11 +17,6 @@ const ServicesPage: React.FC = () => {
   const { ref: ctaRef, isIntersecting: ctaVisible } = useScrollAnimation();
 
   const handleBookService = (service: typeof services[0]) => {
-    const serviceData = {
-      title: service.title,
-      price: service.price,
-      duration: service.duration
-    };
     navigate(`/contact?service=${encodeURIComponent(service.title)}&price=${encodeURIComponent(service.price)}&duration=${encodeURIComponent(service.duration)}`);
   };
 

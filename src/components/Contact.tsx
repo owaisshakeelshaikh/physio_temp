@@ -39,7 +39,6 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Appointment booked:', formData);
     setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {
